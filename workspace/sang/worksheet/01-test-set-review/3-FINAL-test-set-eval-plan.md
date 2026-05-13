@@ -24,7 +24,7 @@ File này tổng hợp từ 5 nguồn (chi tiết cite ở cột "Nguồn" trong
 ## Thông tin nhóm
 
 - **Chủ đề**: Track 1 — Chatbot tư vấn tuyển sinh đại học (AdmissionsBot).
-- **Thành viên**: Phan Thanh Sang (2A202600280), Nguyễn Tiến Dũng (2A2026XXXX), Ngô Hải Văn (2A2026XXXX).
+- **Thành viên**: Phan Thanh Sang (2A202600280), Nguyễn Tiến Dũng (2A202600219), Ngô Hải Văn (2A202600386).
 - **Ngày**: 2026-05-13.
 - **Phiên bản**: v1.
 
