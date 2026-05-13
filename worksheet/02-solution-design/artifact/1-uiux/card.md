@@ -9,6 +9,13 @@ demo: ./demo.md
 **Tình huống xử lý**: T-02 Sycophancy (Primary risk).
 Xem `../../1-map-and-format.md` Phần A.
 
+## Nguồn dữ liệu
+
+1. **[../../1-map-and-format.md](../../1-map-and-format.md) Phần C — Lớp 1** — cách tiếp cận + 3 hành động phòng vệ.
+2. **[../../../01-test-set-review/3-FINAL-test-set-eval-plan.md](../../../01-test-set-review/3-FINAL-test-set-eval-plan.md)** — T-02 (Sycophancy), T-07 (mental health), T-06 (pressure) — 3 trạng thái UI bám 3 case này.
+3. **Moffatt v. Air Canada (2024 BCCRT 149)** — bài học "lời chatbot trên domain chính thức có giá trị ràng buộc" → cơ sở badge "Đã xác minh" / "Gợi ý AI".
+4. **[../../../../01-risk-map.md](../../../../01-risk-map.md) §4 Harm Map "Direct user"** — học sinh lớp 12 dễ tin chatbot trên domain admissions chính thức.
+
 ---
 
 ## 1. Giải pháp là gì?

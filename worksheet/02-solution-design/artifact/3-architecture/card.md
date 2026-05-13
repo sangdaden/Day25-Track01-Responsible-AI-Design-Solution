@@ -9,6 +9,13 @@ demo: ./demo.md
 **Tình huống xử lý**: T-02 Sycophancy (Primary risk).
 Xem `../../1-map-and-format.md` Phần A.
 
+## Nguồn dữ liệu
+
+1. **[../../1-map-and-format.md](../../1-map-and-format.md) Phần C — Lớp 3** — 5 thành phần kiến trúc.
+2. **[../../../../01-risk-map.md](../../../../01-risk-map.md) §3 light + §2 layer mapping** — input → intent → model → output mapping cho 5 layer (Input / Model / UI / Human review / Monitoring).
+3. **Nghị định 13/2023/NĐ-CP** (Bảo vệ dữ liệu cá nhân) — cơ sở PII filter trước mọi pipeline khác.
+4. **Chip Huyen, *AI Engineering* (O'Reilly 2024) Ch.4 + Ch.5** — defense-in-depth pattern (Sycophancy guard ở backend khi prompt bị bypass) + monitoring schema.
+
 ---
 
 ## 1. Giải pháp là gì?

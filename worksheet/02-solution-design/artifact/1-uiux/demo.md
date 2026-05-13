@@ -11,6 +11,13 @@ ASCII sketch 4 trạng thái chính của chatbot tuyển sinh. Mỗi trạng th
 - Câu AI trả lời.
 - Badge / disclaimer / nút action.
 
+## Nguồn dữ liệu
+
+1. **[../../../01-test-set-review/3-FINAL-test-set-eval-plan.md](../../../01-test-set-review/3-FINAL-test-set-eval-plan.md)** — 4 trạng thái UI bám trực tiếp T-02 / T-06 / T-07 / T-09.
+2. **[./card.md](./card.md) §1** — định nghĩa badge + disclaimer + nút counselor.
+3. **prompts/05a-ascii-ui-sketch.md** — pattern ASCII UI tham khảo từ kit Day 25.
+4. **NYT Kevin Roose (Oct 23, 2024) "Can A.I. Be Blamed for a Teen's Suicide?"** (R-02 Setzer) — bài học banner emergency mental health phải LÊN ĐẦU response, không bị chôn dưới câu trả lời ngành học.
+
 ---
 
 ## 1. Màn hình chính — kiến trúc bubble

@@ -11,6 +11,16 @@ nop-cuoi: Có — file cuối Bài 2
 
 File này ghi lại quyết định của Bài 2: chọn rủi ro, nguyên nhân gốc, 3 lớp giải pháp + demo của mỗi lớp.
 
+## Nguồn dữ liệu
+
+File này tổng hợp từ 5 nguồn:
+
+1. **[../01-test-set-review/3-FINAL-test-set-eval-plan.md](../01-test-set-review/3-FINAL-test-set-eval-plan.md)** — chọn rủi ro T-02 Sycophancy + 12 case bộ test → input chính cho Phần A.
+2. **[../../01-risk-map.md](../../01-risk-map.md)** §3 deep + §4 layer mapping — Sycophancy primary failure + Layer chính (Model) + Layer phụ (UI) → nguyên nhân gốc Phần A.
+3. **ELEPHANT Sycophancy benchmark (arxiv 2505.13995)** — chứng minh RLHF default reward agreeable → cơ sở "nếu không thêm guardrail thì AI chắc chắn fail" + lý do chọn Prompt là tầng load-bearing.
+4. **Moffatt v. Air Canada (2024 BCCRT 149)** — bài học "lời chatbot trên domain chính thức có giá trị ràng buộc" → cơ sở 4 hành động phòng vệ đầy đủ cho rủi ro Nặng.
+5. **Chip Huyen, *AI Engineering* Ch.4** — 4 hành động phòng vệ (Ngăn / Phát hiện / Khắc phục / Thông báo) + defense-in-depth pattern.
+
 ## Thông tin nhóm
 
 - **Chủ đề**: Track 1 — Chatbot tư vấn tuyển sinh đại học (AdmissionsBot).

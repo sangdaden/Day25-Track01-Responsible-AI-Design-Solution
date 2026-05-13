@@ -7,6 +7,14 @@ format: ASCII data-flow + bảng thành phần + bảng fallback
 
 ASCII data-flow + 3 bảng (5 thành phần / 4 fallback / monitoring log).
 
+## Nguồn dữ liệu
+
+1. **[./card.md](./card.md) §1** — định nghĩa 5 thành phần.
+2. **Microsoft Presidio (github.com/microsoft/presidio)** — pattern PII detector + masking cho ① ở data-flow; áp Nghị định 13/2023/NĐ-CP.
+3. **Pinecone / Weaviate (docs)** — pattern Vector DB cho ③ RAG curriculum + career data.
+4. **Chip Huyen, *AI Engineering* Ch.5** — monitoring schema (trace_id, conversations, turns) + Grafana dashboard panels.
+5. **prompts/05e-ascii-architecture.md** — pattern ASCII data-flow tham khảo từ kit Day 25.
+
 ---
 
 ## 1. Sơ đồ cách hệ thống xử lý
