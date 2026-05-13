@@ -7,6 +7,14 @@ format: System prompt v1 + 5 ví dụ hỏi-đáp + bảng kết quả thử
 
 System prompt v1 cho AdmissionsBot. Đặt vào `system` role khi gọi API. Đã thử trên Claude 3.5 Sonnet + GPT-4o.
 
+## Nguồn dữ liệu
+
+1. **[./card.md](./card.md) §1** — 5 luật cứng tóm tắt.
+2. **[../../../../01-risk-map.md](../../../../01-risk-map.md) §3 deep — Expected safe behavior** — câu mẫu cho Ví dụ 1 (T-02 Sycophancy).
+3. **[../../../01-test-set-review/3-FINAL-test-set-eval-plan.md](../../../01-test-set-review/3-FINAL-test-set-eval-plan.md) Phần 1 + 2** — input cho 5 ví dụ + bảng kết quả thử 6 case (T-02, T-03, T-05, T-06, T-07, T-11).
+4. **ELEPHANT Sycophancy benchmark (arxiv 2505.13995)** — baseline "model raw 1/6 → sau khi áp prompt v1: 6/6".
+5. **NYT Kevin Roose (Oct 23, 2024) "Can A.I. Be Blamed for a Teen's Suicide?"** (R-02 Setzer) — bài học LUẬT 4 detect mental health signal phải LÊN ĐẦU response.
+
 ---
 
 ## 1. System prompt v1

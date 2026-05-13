@@ -13,6 +13,18 @@ Mục tiêu: mỗi thành viên mở rộng từ 5 tình huống ban đầu (Day
 
 Nhóm 3 người, mỗi người mở rộng từ góc của mình. Bảng cuối Phần C gộp đúng 15 tình huống của Sang (đại diện) — Dũng + Văn mở rộng cùng pattern, sau đó merge ở `2-converge.md` Phần A.
 
+## Nguồn dữ liệu
+
+File này rút từ 5 nguồn (Phần A đã verify từng URL):
+
+1. **[../../01-risk-map.md](../../01-risk-map.md)** §3 (3 failure candidates) + §4 (primary deep dive Sycophancy) + §5 (Harm Map) — feed 4 góc nhìn ở Phần B.
+2. **Moffatt v. Air Canada, 2024 BCCRT 149** (R-01) — Civil Resolution Tribunal of British Columbia, $812.02 CAD; BBC News (Feb 2024).
+3. **Kevin Roose, NYT (Oct 23, 2024) — "Can A.I. Be Blamed for a Teen's Suicide?"** (R-02 Setzer / Character.AI); đối chiếu Megan Garcia v. Character Technologies, MDFL Oct 2024.
+4. **ELEPHANT Sycophancy benchmark, arxiv 2505.13995 (May 2025)** (R-03) + paper "Prosocial Intentions" arxiv 2510.01395.
+5. **Mata v. Avianca, 22-cv-1461, SDNY (June 22, 2023)** (R-04) — Reuters May 27, 2023; Benjamin Weiser, NYT May 27, 2023.
+
+(R-05 VnExpress / Tuổi Trẻ chỉ đánh dấu "Chưa chắc" vì 1 nguồn báo, tham khảo bối cảnh VN.)
+
 ## Quy trình 30 phút
 
 ```text

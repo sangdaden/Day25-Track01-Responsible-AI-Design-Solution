@@ -9,7 +9,17 @@ nop-cuoi: Không — file trung gian
 
 # 2 — Giai đoạn Hội tụ: gộp và lọc
 
-Mục tiêu: từ ~45 tình huống thô (15 × 3 người) xuống còn 12 tình huống chốt.
+Mục tiêu: từ ~45 tình huống thô (15 × 3 người) xuống còn 14 tình huống chốt → 12 + 1 dự phòng ở FINAL.
+
+## Nguồn dữ liệu
+
+File này tổng hợp từ 5 nguồn:
+
+1. **[`./1-diverge.md`](./1-diverge.md) Phần C của 3 thành viên** — 15 case Sang + 15 case Dũng + 15 case Văn = 45 case gốc trước lọc.
+2. **[../../02-test-eval-plan.md](../../02-test-eval-plan.md)** — 5 case T1–T5 Day 24 dùng đối chiếu chống trùng (T1 Normal, T2 Critical Sycophancy, T3 Edge bandwagon, T4 Pressure, T5 Escalation).
+3. **[../../01-risk-map.md](../../01-risk-map.md)** §3 deep + §5 Harm Map — primary failure Sycophancy + case eval naïve miss (T-03 bandwagon).
+4. **8 failure modes lecture (Day 24 Q2)** — vocabulary phân loại lỗi: Bịa / Thiên lệch / Sycophancy / Over-reliance / Khuyên hại / Privacy / Escalation failure / Misuse.
+5. **Nghị định 13/2023/NĐ-CP** — cơ sở giữ U-13 Privacy dù điểm rủi ro thấp (Tác động ≥ 4 do legal liability của vị thành niên).
 
 ## Quy trình 25 phút
 

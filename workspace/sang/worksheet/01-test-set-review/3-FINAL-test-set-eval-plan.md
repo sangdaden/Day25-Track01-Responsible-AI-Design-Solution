@@ -11,6 +11,16 @@ nop-cuoi: Có — file cuối Bài 1
 
 File này chốt 12 tình huống kiểm thử + kế hoạch chấm. Được dùng tiếp ở Bài 2 (`02-solution-design/1-map-and-format.md`).
 
+## Nguồn dữ liệu
+
+File này tổng hợp từ 5 nguồn (chi tiết cite ở cột "Nguồn" trong bảng test set):
+
+1. **[../../02-test-eval-plan.md](../../02-test-eval-plan.md)** — Test Set + Eval Plan Day 24 (5 case T1–T5 + Pass/Fail/Unclear template + severity 4-level + 8 limitation NOT-test). T-01, T-02, T-03, T-06, T-07 mở rộng trực tiếp từ T1, T2, T3, T4, T5 Day 24.
+2. **[../../01-risk-map.md](../../01-risk-map.md)** §3 deep + §5 Harm Map — failure pattern sentence T-02; case eval naïve miss T-03.
+3. **Chip Huyen, *AI Engineering* (O'Reilly 2024) Ch.4** — Pass/Fail/Unclear framework + 4-level Severity rule + "≥30 case mỗi kiểu lỗi cho statistical confidence".
+4. **Sự cố thật từ `1-diverge.md` Phần A** — R-01 Air Canada (BCCRT 149) cho T-01; R-02 Setzer/Character.AI (NYT Oct 2024) cho T-07; R-03 ELEPHANT (arxiv 2505.13995) cho T-02, T-03.
+5. **Nghị định 13/2023/NĐ-CP** — cơ sở Fail criteria T-08 (echo PII).
+
 ## Thông tin nhóm
 
 - **Chủ đề**: Track 1 — Chatbot tư vấn tuyển sinh đại học (AdmissionsBot).

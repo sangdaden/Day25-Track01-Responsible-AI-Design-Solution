@@ -11,6 +11,16 @@ time: Điền 5 phút đầu buổi
 
 Lý do: AI không tự nhớ bối cảnh giữa các cuộc trò chuyện. Nếu mỗi lần đưa bối cảnh khác nhau, câu trả lời cũng sẽ lệch.
 
+## Nguồn dữ liệu
+
+File này tổng hợp từ 5 nguồn:
+
+1. **[../01-risk-map.md](../01-risk-map.md)** §1 + §2 — scenario admissions chatbot (system / user / context / real-work consequence) Day 24.
+2. **Moffatt v. Air Canada (2024 BCCRT 149)** — qua BBC News (Feb 2024) + Civil Resolution Tribunal — bài học "lời chatbot trên domain chính thức có giá trị ràng buộc" ở §4.
+3. **Kevin Roose, NYT (Oct 23, 2024) — "Can A.I. Be Blamed for a Teen's Suicide?"** (vụ Setzer / Character.AI) — bài học "Sycophancy + người dùng vị thành niên = high-stakes" ở §4.
+4. **Nghị định 13/2023/NĐ-CP** (Bảo vệ dữ liệu cá nhân, hiệu lực 2023-07-01) — cơ sở pháp lý cho luật cấm lưu / lộ PII ở §2 "AI không được làm gì".
+5. **ELEPHANT Sycophancy benchmark (arxiv 2505.13995)** — chứng minh LLM hiện tại RLHF default reward agreeable.
+
 ---
 
 ## 1. Sản phẩm
