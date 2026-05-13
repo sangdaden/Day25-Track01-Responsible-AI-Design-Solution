@@ -6,36 +6,33 @@ demo: ./demo.md
 
 # card.md — Lớp giao diện
 
-**Tình huống xử lý**: T-__  
+**Tình huống xử lý**: T-02 Sycophancy (Primary risk).
 Xem `../../1-map-and-format.md` Phần A.
 
 ---
 
 ## 1. Giải pháp là gì?
 
-[Viết 2-3 câu. Nói rõ màn hình sẽ thay đổi gì để giảm rủi ro.]
+Khi chatbot tuyển sinh trả lời câu confirmation-seeking về ngành học, giao diện bubble AI sẽ:
 
-Ví dụ:
-
-> Khi AI trả lời về hạn nộp học bổng, giao diện hiện nhãn “Đã kiểm tra từ nguồn chính thức” hoặc “Chưa có nguồn xác minh”. Nếu thiếu nguồn, màn hình hiện nút chuyển cho tư vấn viên.
+1. Hiển thị badge phân biệt "Thông tin chính thức (đã xác minh)" (xanh, có icon ✓) vs "Gợi ý AI (cần xác nhận)" (vàng, có icon ⚠) ở ngay đầu mỗi câu trả lời.
+2. Khi detect câu Sycophancy trigger ("em có hợp ngành X không?"), bubble AI hiển thị disclaimer cứng phía trên + nút primary "Đặt lịch counselor (SLA 24h)" + nút secondary "Câu hỏi mình nên hỏi counselor" cuối bubble.
+3. Khi detect signal mental health (T-07), bubble đổi sang trạng thái "Hỗ trợ khẩn cấp" — hotline tâm lý 1800-XXX hiện đầu tiên + counselor có training mental load.
 
 ---
 
 ## 2. Vì sao sửa ở lớp giao diện?
 
-[Chọn 1-2 ý đúng với giải pháp của nhóm.]
-
-- Người dùng dễ tin câu trả lời của AI quá mức.
-- Rủi ro xảy ra ở khoảnh khắc người dùng đọc câu trả lời.
-- Giao diện cần làm rõ: thông tin nào đã kiểm tra, thông tin nào chưa chắc.
-- Nếu prompt hoặc dữ liệu vẫn sót lỗi, giao diện là lớp chặn cuối.
+- Người dùng (học sinh lớp 12) dễ tin câu trả lời AI quá mức vì chatbot nằm trên domain admissions chính thức → giao diện cần làm rõ "thông tin nào đã verify, gợi ý nào của AI".
+- Rủi ro xảy ra ở khoảnh khắc người dùng đọc câu trả lời và quyết định nộp hồ sơ — UI là lớp chặn cuối trước khi user action.
+- Nếu prompt hoặc data vẫn sót lỗi (model bịa nhẹ hoặc Sycophancy guard miss), UI vẫn cảnh báo được.
 
 **Hành động phòng vệ chính**:
 
-- [ ] Thông báo rõ giới hạn
-- [ ] Phát hiện dấu hiệu thiếu nguồn
-- [ ] Chuyển người thật khi cần
-- [ ] Giúp người dùng kiểm tra lại nguồn
+- [x] Thông báo rõ giới hạn (badge + disclaimer)
+- [x] Phát hiện dấu hiệu thiếu nguồn / câu Sycophancy / mental health (UI thay đổi state)
+- [x] Chuyển người thật khi cần (nút "Đặt lịch counselor" có sẵn ở mọi câu nhạy cảm)
+- [x] Giúp người dùng kiểm tra lại nguồn (link nguồn admissions kèm dấu thời gian)
 
 ---
 
@@ -45,17 +42,18 @@ Ví dụ:
 
 **Định dạng demo**:
 
-- [ ] Phác thảo màn hình
-- [ ] Luồng màn hình
-- [ ] Bản HTML đơn giản
+- [x] Phác thảo màn hình (ASCII UI sketch)
+- [x] Luồng màn hình (4 trạng thái: bình thường / Sycophancy / mental health / pressure)
+- [ ] Bản HTML đơn giản (không làm — ASCII đủ cho phản biện)
 - [ ] Ảnh hoặc link prototype
 
 **Thành phần cần có trong demo**:
 
-- Trạng thái có nguồn xác minh
-- Trạng thái chưa có nguồn xác minh
-- Cách người dùng chuyển sang người thật
-- Câu chữ cảnh báo ngắn, dễ hiểu
+- Badge "Đã xác minh" (xanh) vs "Gợi ý AI" (vàng).
+- Disclaimer cứng khi câu Sycophancy.
+- Nút primary "Đặt lịch counselor" + secondary "Câu hỏi mình nên hỏi counselor".
+- Trạng thái "Hỗ trợ khẩn cấp" cho mental health signal.
+- Câu chữ cảnh báo ngắn (1 dòng, ≤80 ký tự).
 
 ---
 
@@ -63,20 +61,24 @@ Ví dụ:
 
 **Có thể gây vấn đề gì?**
 
-[Ví dụ: màn hình rối hơn, người dùng thấy bị làm phiền, thao tác chậm hơn.]
+1. **Giao diện rối hơn** ở case bình thường (T-09, T-12) — user chỉ hỏi học phí cũng thấy badge → cảm giác bị làm phiền.
+2. **Disclaimer fatigue**: nếu mọi câu đều có disclaimer, user sẽ bỏ qua như "cookie banner" — mất hiệu lực.
+3. **Nút counselor luôn hiện** có thể làm counselor quá tải nếu user click trên mỗi câu.
 
 **Nhóm giảm vấn đề đó bằng cách nào?**
 
-[Ví dụ: chỉ hiện cảnh báo khi câu trả lời có rủi ro cao; dùng nhãn ngắn; đưa chi tiết vào nút mở rộng.]
+1. Chỉ hiện disclaimer cứng + nút "Đặt lịch counselor" với câu thuộc rủi ro cao (Sycophancy / mental health / pressure / out-of-scope). Câu info bình thường (T-09 học phí) chỉ có badge nhỏ không có disclaimer cứng.
+2. Disclaimer khác nhau theo loại rủi ro: "Đây là gợi ý AI, không phải tư vấn cá nhân" vs "Mình không thay thế bác sĩ / counselor" → user nhận biết được mức độ thay vì coi mọi disclaimer như nhau.
+3. Nút counselor có rate-limit phía backend (1 ticket / user / 24h cho cùng chủ đề) — nói rõ trong UI "Bạn đã đặt lịch hôm nay, counselor sẽ liên hệ trong 24h" thay vì cho click vô hạn.
 
 ---
 
 ## 5. Checklist trước khi nộp
 
-- [ ] Giải pháp gắn đúng với một rủi ro chính.
-- [ ] Demo nhìn vào là hiểu vấn đề được chặn ở đâu.
-- [ ] Có đủ trạng thái bình thường và trạng thái lỗi.
-- [ ] Có cách chuyển sang người thật khi AI không nên tự xử lý.
-- [ ] Câu chữ trong giao diện ngắn, không đổ hết trách nhiệm cho người dùng.
+- [x] Giải pháp gắn đúng với rủi ro T-02 Sycophancy.
+- [x] Demo nhìn vào là hiểu disclaimer + badge + nút counselor chặn ở đâu.
+- [x] Có đủ 4 trạng thái: bình thường / Sycophancy trigger / mental health / pressure refusal.
+- [x] Có cách chuyển sang người thật (nút "Đặt lịch counselor" + hotline 1800-XXX).
+- [x] Câu chữ trong giao diện ngắn (≤80 ký tự), không đổ hết trách nhiệm cho người dùng (không dùng câu "Bạn tự chịu trách nhiệm…").
 
-**Người phụ trách**: [Tên thành viên]
+**Người phụ trách**: Nguyễn Tiến Dũng.
