@@ -11,6 +11,16 @@ time: Điền 5 phút đầu buổi
 
 Lý do: AI không tự nhớ bối cảnh giữa các cuộc trò chuyện. Nếu mỗi lần đưa bối cảnh khác nhau, câu trả lời cũng sẽ lệch.
 
+## Nguồn dữ liệu
+
+File này tổng hợp từ 5 nguồn:
+
+1. **[../01-risk-map.md](../01-risk-map.md)** §1 + §2 — scenario admissions chatbot (system / user / context / real-work consequence) Day 24.
+2. **Moffatt v. Air Canada (2024 BCCRT 149)** — qua BBC News (Feb 2024) + Civil Resolution Tribunal — bài học "lời chatbot trên domain chính thức có giá trị ràng buộc" ở §4.
+3. **Kevin Roose, NYT (Oct 23, 2024) — "Can A.I. Be Blamed for a Teen's Suicide?"** (vụ Setzer / Character.AI) — bài học "Sycophancy + người dùng vị thành niên = high-stakes" ở §4.
+4. **Nghị định 13/2023/NĐ-CP** (Bảo vệ dữ liệu cá nhân, hiệu lực 2023-07-01) — cơ sở pháp lý cho luật cấm lưu / lộ PII ở §2 "AI không được làm gì".
+5. **ELEPHANT Sycophancy benchmark (arxiv 2505.13995)** — chứng minh LLM hiện tại RLHF default reward agreeable.
+
 ---
 
 ## 1. Sản phẩm
@@ -73,7 +83,9 @@ Quyết định ngành học có hậu quả 4 năm + 200–600 triệu học ph
 ## 5. Ghi chú thêm
 
 - **Hạn chót nộp Day 25**: 23:59 ngày 2026-05-13.
-- **Quy mô nhóm**: 3 thành viên — Phan Thanh Sang, Nguyễn Tiến Dũng, Ngô Hải Văn.
+- **Quy mô nhóm**: 3 thành viên — Phan Thanh Sang (2A202600280), Nguyễn Tiến Dũng (2A202600219), Ngô Hải Văn (2A202600386). Bản nháp cá nhân Day 25 ở [`../workspace/NDung.md`](../workspace/NDung.md) (Dũng) và [`../workspace/van.md`](../workspace/van.md) (Văn).
+- **Tên gọi sản phẩm**: nhóm có 2 tên đang dùng song song — **AdmissionsBot** (Sang dùng trong docs chính + lớp Prompt) ↔ **VinUni Major Match** (Dũng dùng trong test set cá nhân). Trước launch sẽ chốt 1 tên ở UI.
+- **Hotline VN cụ thể nhóm chọn** (theo verify của Văn): **111** — Tổng đài bảo vệ trẻ em (miễn phí, 24/7); **1800-1567** — Tổng đài tư vấn tâm lý (thay placeholder `1800-XXX` trong prompt v1 và demo UI).
 - **Nguồn dữ liệu giả định cho demo**: trang admissions của một trường đại học tư nhân Việt Nam (ẩn danh hóa để tránh đụng policy thật của trường cụ thể).
 - **Câu hỏi thật học sinh hay hỏi nhất** (thu thập từ Sang quan sát + brainstorm nhóm):
   1. "Em [điểm/sở thích vague], có hợp ngành Y không ạ?" (Sycophancy trigger)

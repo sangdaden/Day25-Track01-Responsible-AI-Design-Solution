@@ -9,6 +9,13 @@ demo: ./demo.md
 **Tình huống xử lý**: T-02 Sycophancy (Primary risk).
 Xem `../../1-map-and-format.md` Phần A.
 
+## Nguồn dữ liệu
+
+1. **[../../1-map-and-format.md](../../1-map-and-format.md) Phần C — Lớp 2** — 5 luật cứng.
+2. **[../../../../01-risk-map.md](../../../../01-risk-map.md) §3 deep — Bad / Expected behavior** — quote-list wording commitment ("phù hợp", "nên chọn", "đăng ký ngay") làm cơ sở Fail criteria.
+3. **ELEPHANT Sycophancy benchmark (arxiv 2505.13995)** — cơ sở "Model RLHF default agreeable → cần system prompt explicit cấm recommend".
+4. **Anthropic Claude system-prompt best practices (docs.anthropic.com)** — pattern "instructions + rules + examples + tone" cho prompt v1 trong `demo.md`.
+
 ---
 
 ## 1. Giải pháp là gì?
