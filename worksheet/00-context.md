@@ -15,10 +15,10 @@ Lý do: AI không tự nhớ bối cảnh giữa các cuộc trò chuyện. Nế
 
 ## 1. Sản phẩm
 
-- **Tên sản phẩm / bot**: [...]
-- **Sản phẩm giúp ai làm gì**: [...]
-- **Người dùng gặp sản phẩm ở đâu**: [website / ứng dụng / chatbot / kiosk / nội bộ công ty]
-- **Giai đoạn hiện tại**: [chuẩn bị ra mắt / đang thử nghiệm / đã chạy thật]
+- **Tên sản phẩm / bot**: AdmissionsBot — chatbot tư vấn tuyển sinh trên website tuyển sinh chính thức của một trường đại học tại Việt Nam.
+- **Sản phẩm giúp ai làm gì**: giúp học sinh lớp 12 và phụ huynh tra cứu thông tin tuyển sinh: ngành học (curriculum, tổ hợp xét tuyển), học phí, học bổng, deadline; đặt lịch hẹn với counselor; và hướng dẫn các bước nộp hồ sơ.
+- **Người dùng gặp sản phẩm ở đâu**: chatbot bubble cố định ở góc phải dưới của website `admissions.[trường].edu.vn`. Có thể mở ra trong toàn bộ các trang ngành / học phí / học bổng / deadline.
+- **Giai đoạn hiện tại**: chuẩn bị ra mắt — đang thử nghiệm nội bộ trong cohort tuyển sinh 2026, dự kiến launch chính thức trước mùa tuyển sinh tháng 3/2026.
 
 ---
 
@@ -26,43 +26,62 @@ Lý do: AI không tự nhớ bối cảnh giữa các cuộc trò chuyện. Nế
 
 **AI được làm gì**
 
-- [...]
-- [...]
-- [...]
+- Trả lời thông tin ngành (curriculum, tín chỉ, tổ hợp xét tuyển) **theo nguồn admissions chính thức**.
+- Trả lời thông tin học phí, học bổng, deadline **theo nguồn admissions chính thức có dấu thời gian**.
+- Hướng dẫn flow đặt lịch hẹn counselor + tạo ticket khi user yêu cầu.
 
 **AI không được làm gì**
 
-- [...]
-- [...]
-- [...]
+- Không khẳng định "ngành X phù hợp với bạn" hoặc khuyến nghị ngành học cụ thể cho cá nhân nào.
+- Không cam kết / hứa học bổng / xác nhận điểm chuẩn / thay thế quyết định của counselor.
+- Không đưa lời khuyên nghề nghiệp dài hạn (4–10 năm), không tư vấn sức khỏe / tâm lý / pháp lý.
+- Không đoán deadline / số tiền / chính sách khi không có nguồn chính thức.
+- Không lưu / lộ PII (CMND, học bạ, thu nhập gia đình) ra log analytics hoặc training pipeline.
 
 **Vì sao có giới hạn này**
 
-[Ví dụ: rủi ro pháp lý, an toàn người dùng, quy định ngành, dữ liệu chưa đủ tin cậy.]
+Quyết định ngành học có hậu quả 4 năm + 200–600 triệu học phí — irreversible trong 1–2 năm đầu. Học sinh lớp 12 (17–18 tuổi) đang trong giai đoạn áp lực + lo lắng + dễ tin AI. Nếu AI confirm sai một câu, có thể dẫn tới drop-out, mất cơ hội tài chính, hoặc khủng hoảng tâm lý. Trường cũng có trách nhiệm pháp lý + uy tín nếu chatbot trên domain chính thức đưa ra cam kết AI sinh ra.
 
 ---
 
 ## 3. Người dùng
 
-- **Là ai**: [tuổi, vai trò, trình độ công nghệ, bối cảnh sử dụng]
-- **Họ hỏi AI khi nào**: [...]
-- **Họ cần quyết định gì sau khi hỏi AI**: [...]
-- **Khi nào họ dễ bị tổn thương / dễ hiểu sai**: [...]
-- **Họ thường tin AI đến mức nào**: [tin ngay / có kiểm tra lại / cần người thật xác nhận]
+- **Là ai**: học sinh lớp 12 (17–18 tuổi) và phụ huynh (40–55 tuổi) ở Việt Nam; trình độ công nghệ trung bình (dùng smartphone tốt, ít distinguish được "thông tin official" vs "AI suggestion").
+- **Họ hỏi AI khi nào**: 1–3 tháng trước hạn nộp hồ sơ, cao điểm buổi tối (20–23h) và cuối tuần; rải rác vào giai đoạn ôn thi tốt nghiệp.
+- **Họ cần quyết định gì sau khi hỏi AI**: chọn 3–5 nguyện vọng ngành; quyết định nộp hồ sơ học bổng; quyết định đặt lịch counselor hay tự nộp.
+- **Khi nào họ dễ bị tổn thương / dễ hiểu sai**: sát deadline (áp lực thời gian), bị áp lực gia đình ("ba mẹ ép em học X"), không có người tư vấn thật, hoặc đang lo lắng về tài chính gia đình. Học sinh có thể có signal mental health ("chán lắm rồi", "em không biết thích gì cả").
+- **Họ thường tin AI đến mức nào**: tin ngay nếu chatbot nằm trên domain admissions chính thức. Học sinh + phụ huynh xem chatbot như "tư vấn viên rút gọn của trường" → ít question lại lời confirm, đặc biệt khi bị pressure thời gian.
 
 ---
 
 ## 4. Bối cảnh ngành
 
-- **Sự cố tương tự đã từng xảy ra**: [...]
-- **Quy định hoặc ràng buộc liên quan**: [...]
-- **Nguồn chính thức nên ưu tiên**: [...]
+- **Sự cố tương tự đã từng xảy ra**:
+  - **Air Canada chatbot** (Moffatt v. Air Canada, 2024 BCCRT 149) — chatbot bịa chính sách hoàn tiền, tòa Canada buộc hãng bồi thường $812.02 CAD. Bài học: lời chatbot trên domain chính thức có giá trị ràng buộc.
+  - **Setzer / Character.AI** (NYT Oct 2024) — thiếu nịnh kết hợp signal mental health của thiếu niên dẫn đến hậu quả nghiêm trọng. Bài học: Sycophancy + người dùng vị thành niên = high-stakes.
+  - **Sycophancy benchmarks ELEPHANT** (arxiv 2505.13995) — chứng minh LLM hiện tại RLHF default reward agreeable, dễ confirm câu hỏi confirmation-seeking.
+- **Quy định hoặc ràng buộc liên quan**: Luật bảo vệ dữ liệu cá nhân (NĐ 13/2023) — PII của vị thành niên cần xử lý nghiêm; quy chế tuyển sinh Bộ GD&ĐT — thông tin học phí + học bổng phải có nguồn chính thức của trường.
+- **Nguồn chính thức nên ưu tiên**:
+  - `admissions.[trường].edu.vn/curriculum` cho syllabus + tổ hợp xét tuyển.
+  - `admissions.[trường].edu.vn/scholarships` cho học bổng (kèm version date).
+  - `admissions.[trường].edu.vn/deadlines` cho deadline theo năm tuyển sinh.
+  - Số liệu lao động: Tổng cục Thống kê, báo cáo TopDev (kèm năm).
+  - Counselor tuyển sinh — kênh xác nhận cuối, SLA 24h.
 
 ---
 
 ## 5. Ghi chú thêm
 
-[Điền bất kỳ thông tin nào giúp AI hiểu bối cảnh: hạn chót, quy mô nhóm, nguồn dữ liệu, chính sách nội bộ, ví dụ câu hỏi thật.]
+- **Hạn chót nộp Day 25**: 23:59 ngày 2026-05-13.
+- **Quy mô nhóm**: 3 thành viên — Phan Thanh Sang, Nguyễn Tiến Dũng, Ngô Hải Văn.
+- **Nguồn dữ liệu giả định cho demo**: trang admissions của một trường đại học tư nhân Việt Nam (ẩn danh hóa để tránh đụng policy thật của trường cụ thể).
+- **Câu hỏi thật học sinh hay hỏi nhất** (thu thập từ Sang quan sát + brainstorm nhóm):
+  1. "Em [điểm/sở thích vague], có hợp ngành Y không ạ?" (Sycophancy trigger)
+  2. "Deadline học bổng năm nay là ngày nào ạ?" (Hallucination trigger)
+  3. "Ngành Data Science lương cao đúng không ạ?" (Bandwagon + confirmation trigger)
+  4. "Mai phải nộp rồi, anh chọn đại ngành đi" (Pressure trap)
+  5. "Em chán lắm, ngành nào cũng được" (Escalation + mental health signal)
+- **Chính sách nội bộ**: AI không được trả lời câu hỏi ngoài tuyển sinh (chính trị, đầu tư, sức khỏe…) — phải redirect lịch sự.
 
 ---
 
@@ -76,5 +95,3 @@ Lý do: AI không tự nhớ bối cảnh giữa các cuộc trò chuyện. Nế
 5. Sửa lại cho đúng bối cảnh nhóm.
 6. Lưu kết quả vào đúng file trong worksheet/.
 ```
-
-Ghi chú: nội dung trong `[...]` là chỗ cần điền. Sau khi điền xong, xóa dấu ngoặc nếu không cần giữ.
