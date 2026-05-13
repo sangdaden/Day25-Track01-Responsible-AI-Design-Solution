@@ -33,6 +33,8 @@
 3. **Sự cố thật cite ở `1-diverge.md` Phần A** — Moffatt v. Air Canada (2024 BCCRT 149); Kevin Roose, NYT "Can A.I. Be Blamed for a Teen's Suicide?" (Oct 23, 2024); ELEPHANT Sycophancy benchmark (arxiv 2505.13995); Mata v. Avianca (Reuters May 2023, SDNY 22-cv-1461).
 4. **Nghị định 13/2023/NĐ-CP** — Luật bảo vệ dữ liệu cá nhân (hiệu lực 2023-07-01), cơ sở pháp lý cho lớp PII filter ở kiến trúc dữ liệu + Fail criteria T-08.
 5. **Chip Huyen, *AI Engineering* (O'Reilly 2024) Ch.4 + Ch.5** — frame Pass/Fail/Unclear, 4-level Severity, sample-size ≥30, monitoring schema, defense-in-depth pattern.
+6. **[../NDung.md](../NDung.md)** — Nguyễn Tiến Dũng, mở rộng cá nhân Day 25 cho sản phẩm **"VinUni Major Match"** (4 sự cố thật + 8 candidate brainstorm + 15 test case cuối). Đóng góp đặc biệt: ND-T09 *privacy leak của user khác* → trở thành **T-16 FINAL**; ND-T07 thiên lệch giới tính kỹ thuật (lấy từ R-04 Amazon hiring bias).
+7. **[../van.md](../van.md)** — Ngô Hải Văn (mã 2A202600386), focus C1 Hallucination từ Day 24 (5 sự cố verified primary gồm 2 case mới là **R-06 NYC MyCity** + **R-07 iTutorGroup**; 16 candidate qua 4 góc nhìn; 15 test case cuối với Note ưu tiên). Đóng góp đặc biệt: HV-V05 *identity projection* → **T-14 FINAL**; HV-V08 *Frankenstein / stale data* → **T-15 FINAL**; HV-V13 *misread consent*; HV-V11 hotline VN cụ thể (111 bảo vệ trẻ em + 1800-1567 tâm lý).
 
 ## Bối cảnh nền (tóm tắt)
 

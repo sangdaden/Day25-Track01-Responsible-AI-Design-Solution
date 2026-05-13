@@ -133,4 +133,29 @@ Checklist trước khi chốt (Sang):
 
 Bảng tương tự của Dũng + Văn được gộp ở `2-converge.md` Phần A.
 
+---
+
+## Phần A bis — Sự cố thật bổ sung (Văn deep research thêm)
+
+Trong giai đoạn cá nhân, Văn ([`../../../workspace/van.md`](../../../workspace/van.md) Phần A) verify thêm 2 sự cố thật có nguồn primary cho track admissions. Nhóm gộp vào Phần A khi converge:
+
+| #    | Ngày    | Tổ chức / Vụ                           | Việc đã xảy ra                                                                                                                                                                                                  | Nguồn (verified)                       | Mức độ   | Đã kiểm chứng? |
+|------|---------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|----------|----------------|
+| R-06 | 2024-03 | NYC MyCity chatbot (MS Azure OpenAI)    | Chatbot **chính thức** của NYC gov trả lời sai luật doanh nghiệp: nói chủ nhà được từ chối tenant dùng housing voucher (phạm luật NYC); nói chủ DN trừ tip vào lương tối thiểu (sai). Vẫn giữ online sau khi phát hiện. | The Markup (3/2024) + AP News          | Nặng     | Có (2 nguồn)   |
+| R-07 | 2023-08 | iTutorGroup (US, online tutoring)       | Tool AI sàng lọc CV tự động reject nữ ≥55 + nam ≥60. ~200 ứng viên bị loại oan. EEOC settle $365K — tiền lệ AI age discrimination ở Mỹ.                                                                          | EEOC press release 9/8/2023 + Reuters  | Nặng     | Có (2 nguồn)   |
+
+### Bài học từ R-06, R-07 (Văn rút ra, nhóm đồng ý)
+
+- **R-06 NYC MyCity** → kênh chính thức (.gov, edu.vn) **vẫn để chatbot bịa policy**. Tương đồng tuyệt đối website tuyển sinh trường. Học sinh tin website trường y như tin chính quyền. → ảnh hưởng đến `T-09` học phí + `T-15` Frankenstein/stale data trong FINAL.
+- **R-07 iTutorGroup** → bias theo **nhóm dân số**. Chatbot tuyển sinh có thể trả lời khác cho học sinh tỉnh xa / dân tộc thiểu số / hệ GED — nếu training data nghiêng về urban mainstream. → ảnh hưởng đến `T-12` thiên lệch vùng miền.
+
+### Bảng case cá nhân của Dũng + Văn (15 mỗi người)
+
+Để gọn file này, bảng đầy đủ 15 case của mỗi thành viên được copy vào [`2-converge.md`](./2-converge.md) Phần A bis (ND-T01…ND-T15 + HV-V01…HV-V15). Sang chỉ giữ ở đây bảng của mình (15 case Phần C trên).
+
+3 case mới chuyển vào FINAL từ synthesis Dũng + Văn:
+- **T-14 Identity projection** (từ HV-V05) — bypass disclaimer bằng giả danh sinh viên / nhân viên.
+- **T-15 Frankenstein / stale data** (từ HV-V08) — mix info năm cũ + năm mới.
+- **T-16 Privacy leak người dùng khác** (từ ND-T09) — yêu cầu SĐT user trước. Vi phạm NĐ 13/2023.
+
 Sau bước này, Sang chuyển 15 case sang `2-converge.md` Phần A để gộp với của Dũng + Văn.
